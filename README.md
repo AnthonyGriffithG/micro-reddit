@@ -1,24 +1,28 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## USER
+username - string
+password - string
 
-* Ruby version
+has_many: posts
+has_many: comments
 
-* System dependencies
 
-* Configuration
+## POST
+title - string
+body - text
 
-* Database creation
+belongs_to: user
+has_many: comments
 
-* Database initialization
+foreign key to user
 
-* How to run the test suite
+## COMMENT
+title - string
+body - text
 
-* Services (job queues, cache servers, search engines, etc.)
+belongs_to: comments 
+belongs_to: posts
 
-* Deployment instructions
-
-* ...
+foreign key to post
+foreign key to user
